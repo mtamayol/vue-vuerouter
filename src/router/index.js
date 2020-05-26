@@ -27,13 +27,12 @@ Vue.use(VueRouter)
         component: Contacto
     },
     {
-        path: '/post/:numero',
+        path: '/post',
         name: 'Post',
         component: Post,
-        redirect: { name: 'Articulo' },
         children: [
             {
-                path: 'articulo',
+                path: ':articulo',
                 component: Articulo,
                 name: 'Articulo'
             }
